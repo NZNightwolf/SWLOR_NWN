@@ -22,6 +22,8 @@ using SWLOR.Game.Server.NWNX;
 using SWLOR.Game.Server.NWNX.Contracts;
 using SWLOR.Game.Server.Perk;
 using SWLOR.Game.Server.Processor.Contracts;
+using SWLOR.Game.Server.Provider;
+using SWLOR.Game.Server.Provider.Contracts;
 using SWLOR.Game.Server.QuestRule.Contracts;
 using SWLOR.Game.Server.Service;
 using SWLOR.Game.Server.Service.Contracts;
@@ -341,6 +343,7 @@ namespace SWLOR.Game.Server
             builder.RegisterType<NWNXWeapon>().As<INWNXWeapon>().SingleInstance();
             builder.RegisterType<NWScript>().As<INWScript>().SingleInstance();
             builder.RegisterType<BehaviourTreeBuilder>().SingleInstance();
+            RegisterCacheProvider(builder);
             
             _container = builder.Build();
         }
@@ -366,6 +369,24 @@ namespace SWLOR.Game.Server
                     builder.RegisterType(type).As<T>().Keyed<T>(key).SingleInstance();
                 else
                     builder.RegisterType(type).As<T>().Keyed<T>(key).InstancePerLifetimeScope();
+            }
+        }
+
+        private static void RegisterCacheProvider(ContainerBuilder builder)
+        {
+            string provider = Environment.GetEnvironmentVariable("CACHE_PROVIDER");
+            if (string.IsNullOrWhiteSpace(provider) || provider.ToLower() != "redis")
+                provider = "memory";
+
+            // Redis
+            if (provider == "redis")
+            {
+                builder.RegisterType<RedisCacheProvider>().As<ICacheProvider>().SingleInstance();
+            }
+            // In-Memory
+            else
+            {
+                builder.RegisterType<MemoryCacheProvider>().As<ICacheProvider>().SingleInstance();
             }
         }
     }

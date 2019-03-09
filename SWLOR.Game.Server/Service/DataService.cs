@@ -15,6 +15,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using SWLOR.Game.Server.Data;
+using SWLOR.Game.Server.Provider.Contracts;
 using Attribute = SWLOR.Game.Server.Data.Entity.Attribute;
 using BaseStructureType = SWLOR.Game.Server.Data.Entity.BaseStructureType;
 using ComponentType = SWLOR.Game.Server.Data.Entity.ComponentType;
@@ -29,18 +30,18 @@ namespace SWLOR.Game.Server.Service
         public ConcurrentQueue<DatabaseAction> DataQueue { get; }
         private string _connectionString;
         private bool _cacheInitialized;
-
-        public Dictionary<Type, Dictionary<object, object>> Cache { get; }
-
-        public DataService()
+        private readonly ICacheProvider _cache;
+        
+        public DataService(ICacheProvider cacheProvider)
         {
             DataQueue = new ConcurrentQueue<DatabaseAction>();
-            Cache = new Dictionary<Type, Dictionary<object, object>>();
+            _cache = cacheProvider;
 
         }
 
         public void Initialize(bool initializeCache)
         {
+            // Initialize the SQL database connection string.
             _connectionString = new SqlConnectionStringBuilder()
             {
                 DataSource = Environment.GetEnvironmentVariable("SQL_SERVER_IP_ADDRESS"),
@@ -49,6 +50,7 @@ namespace SWLOR.Game.Server.Service
                 Password = Environment.GetEnvironmentVariable("SQL_SERVER_PASSWORD")
             }.ToString();
 
+            // Build the cache if specified.
             if (initializeCache)
                 InitializeCache();
         }
@@ -192,7 +194,7 @@ namespace SWLOR.Game.Server.Service
             foreach (var result in results)
             {
                 object id = GetEntityKey(result);
-                SetIntoCache<PCMarketListing>(id, result);
+                _cache.Set<PCMarketListing>(id, result);
             }
         }
 
@@ -209,50 +211,50 @@ namespace SWLOR.Game.Server.Service
                 using (var multi = connection.QueryMultiple("GetPlayerData", new {PlayerID = player.GlobalID}, commandType: CommandType.StoredProcedure))
                 {
                     foreach(var item in multi.Read<PCCooldown>().ToList())
-                        SetIntoCache<PCCooldown>(item.ID, item);
+                        _cache.Set<PCCooldown>(item.ID, item);
                     foreach (var item in multi.Read<PCCraftedBlueprint>().ToList())
-                        SetIntoCache<PCCraftedBlueprint>(item.ID, item);
+                        _cache.Set<PCCraftedBlueprint>(item.ID, item);
 
                     foreach (var item in multi.Read<PCCustomEffect>().ToList())
-                        SetIntoCache<PCCustomEffect>(item.ID, item);
+                        _cache.Set<PCCustomEffect>(item.ID, item);
                     foreach (var item in multi.Read<PCImpoundedItem>().ToList())
-                        SetIntoCache<PCImpoundedItem>(item.ID, item);
+                        _cache.Set<PCImpoundedItem>(item.ID, item);
                     foreach (var item in multi.Read<PCKeyItem>().ToList())
-                        SetIntoCache<PCKeyItem>(item.ID, item);
+                        _cache.Set<PCKeyItem>(item.ID, item);
                     foreach (var item in multi.Read<PCMapPin>().ToList())
-                        SetIntoCache<PCMapPin>(item.ID, item);
+                        _cache.Set<PCMapPin>(item.ID, item);
                     foreach (var item in multi.Read<PCMapProgression>().ToList())
-                        SetIntoCache<PCMapProgression>(item.ID, item);
+                        _cache.Set<PCMapProgression>(item.ID, item);
                     foreach (var item in multi.Read<PCObjectVisibility>().ToList())
-                        SetIntoCache<PCObjectVisibility>(item.ID, item);
+                        _cache.Set<PCObjectVisibility>(item.ID, item);
 
                     var outfit = multi.Read<PCOutfit>().SingleOrDefault();
 
                     if(outfit != null)
-                        SetIntoCache<PCOutfit>(outfit.PlayerID, outfit);
+                        _cache.Set<PCOutfit>(outfit.PlayerID, outfit);
 
                     foreach (var item in multi.Read<PCOverflowItem>().ToList())
-                        SetIntoCache<PCOverflowItem>(item.ID, item);
+                        _cache.Set<PCOverflowItem>(item.ID, item);
                     foreach (var item in multi.Read<PCPerk>().ToList())
-                        SetIntoCache<PCPerk>(item.ID, item);
+                        _cache.Set<PCPerk>(item.ID, item);
                     foreach (var item in multi.Read<PCQuestItemProgress>().ToList())
-                        SetIntoCache<PCQuestItemProgress>(item.ID, item);
+                        _cache.Set<PCQuestItemProgress>(item.ID, item);
                     foreach (var item in multi.Read<PCQuestKillTargetProgress>().ToList())
-                        SetIntoCache<PCQuestKillTargetProgress>(item.ID, item);
+                        _cache.Set<PCQuestKillTargetProgress>(item.ID, item);
                     foreach (var item in multi.Read<PCQuestStatus>().ToList())
-                        SetIntoCache<PCQuestStatus>(item.ID, item);
+                        _cache.Set<PCQuestStatus>(item.ID, item);
                     foreach (var item in multi.Read<PCRegionalFame>().ToList())
-                        SetIntoCache<PCRegionalFame>(item.ID, item);
+                        _cache.Set<PCRegionalFame>(item.ID, item);
                     foreach (var item in multi.Read<PCSearchSite>().ToList())
-                        SetIntoCache<PCSearchSite>(item.ID, item);
+                        _cache.Set<PCSearchSite>(item.ID, item);
                     foreach (var item in multi.Read<PCSearchSiteItem>().ToList())
-                        SetIntoCache<PCSearchSiteItem>(item.ID, item);
+                        _cache.Set<PCSearchSiteItem>(item.ID, item);
                     foreach(var item in multi.Read<PCSkill>().ToList())
-                        SetIntoCache<PCSkill>(item.ID, item);
+                        _cache.Set<PCSkill>(item.ID, item);
                     foreach(var item in multi.Read<BankItem>().ToList())
-                        SetIntoCache<BankItem>(item.ID, item);
+                        _cache.Set<BankItem>(item.ID, item);
                     foreach(var item in multi.Read<PCSkillPool>().ToList())
-                        SetIntoCache<PCSkillPool>(item.ID, item);
+                        _cache.Set<PCSkillPool>(item.ID, item);
                 }
             }
 
@@ -270,47 +272,47 @@ namespace SWLOR.Game.Server.Service
             Guid id = player.GlobalID;
             
             foreach(var item in Where<PCCooldown>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCCooldown>(item.ID);
+                _cache.Remove<PCCooldown>(item.ID);
             foreach (var item in Where<PCCraftedBlueprint>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCCraftedBlueprint>(item.ID);
+                _cache.Remove<PCCraftedBlueprint>(item.ID);
             foreach (var item in Where<PCCustomEffect>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCCustomEffect>(item.ID);
+                _cache.Remove<PCCustomEffect>(item.ID);
             foreach (var item in Where<PCImpoundedItem>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCImpoundedItem>(item.ID);
+                _cache.Remove<PCImpoundedItem>(item.ID);
             foreach (var item in Where<PCKeyItem>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCKeyItem>(item.ID);
+                _cache.Remove<PCKeyItem>(item.ID);
             foreach (var item in Where<PCMapPin>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCMapPin>(item.ID);
+                _cache.Remove<PCMapPin>(item.ID);
             foreach (var item in Where<PCMapProgression>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCMapProgression>(item.ID);
+                _cache.Remove<PCMapProgression>(item.ID);
             foreach (var item in Where<PCObjectVisibility>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCObjectVisibility>(item.ID);
+                _cache.Remove<PCObjectVisibility>(item.ID);
             foreach (var item in Where<PCOutfit>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCOutfit>(item.PlayerID);
+                _cache.Remove<PCOutfit>(item.PlayerID);
             foreach (var item in Where<PCOverflowItem>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCOverflowItem>(item.ID);
+                _cache.Remove<PCOverflowItem>(item.ID);
             foreach (var item in Where<PCPerk>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCPerk>(item.ID);
+                _cache.Remove<PCPerk>(item.ID);
             foreach (var item in Where<PCPerkRefund>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCPerkRefund>(item.ID);
+                _cache.Remove<PCPerkRefund>(item.ID);
             foreach (var item in Where<PCQuestItemProgress>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCQuestItemProgress>(item.ID);
+                _cache.Remove<PCQuestItemProgress>(item.ID);
             foreach (var item in Where<PCQuestKillTargetProgress>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCQuestKillTargetProgress>(item.ID);
+                _cache.Remove<PCQuestKillTargetProgress>(item.ID);
             foreach (var item in Where<PCQuestStatus>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCQuestStatus>(item.ID);
+                _cache.Remove<PCQuestStatus>(item.ID);
             foreach (var item in Where<PCRegionalFame>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCRegionalFame>(item.ID);
+                _cache.Remove<PCRegionalFame>(item.ID);
             foreach (var item in Where<PCSearchSite>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCSearchSite>(item.ID);
+                _cache.Remove<PCSearchSite>(item.ID);
             foreach (var item in Where<PCSearchSiteItem>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCSearchSiteItem>(item.ID);
+                _cache.Remove<PCSearchSiteItem>(item.ID);
             foreach(var item in Where<PCSkill>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCSkill>(item.ID);
+                _cache.Remove<PCSkill>(item.ID);
             foreach(var item in Where<BankItem>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<BankItem>(item.ID);
+                _cache.Remove<BankItem>(item.ID);
             foreach(var item in Where<PCSkillPool>(x => x.PlayerID == id).ToList())
-                DeleteFromCache<PCSkillPool>(item.ID);
+                _cache.Remove<PCSkillPool>(item.ID);
         }
 
         /// <summary>
@@ -329,11 +331,11 @@ namespace SWLOR.Game.Server.Service
             {
                 if (actionType == DatabaseActionType.Insert || actionType == DatabaseActionType.Update)
                 {
-                    SetIntoCache(item.GetType(), GetEntityKey(item), item);
+                    _cache.Set(item.GetType(), GetEntityKey(item), item);
                 }
                 else if (actionType == DatabaseActionType.Delete)
                 {
-                    DeleteFromCache(item.GetType(), GetEntityKey(item));
+                    _cache.Remove(item.GetType(), GetEntityKey(item));
                 }
             }
 
@@ -353,90 +355,16 @@ namespace SWLOR.Game.Server.Service
 
             if (actionType == DatabaseActionType.Insert || actionType == DatabaseActionType.Update)
             {
-                SetIntoCache(data.GetType(), GetEntityKey(data), data);
+                _cache.Set(data.GetType(), GetEntityKey(data), data);
             }
             else if (actionType == DatabaseActionType.Delete)
             {
-                DeleteFromCache(data.GetType(), GetEntityKey(data));
+                _cache.Remove(data.GetType(), GetEntityKey(data));
             }
 
             DataQueue.Enqueue(new DatabaseAction(data, actionType));
         }
-
-        private T GetFromCache<T>(object key)
-            where T : IEntity
-        {
-            if (!Cache.TryGetValue(typeof(T), out var cachedSet))
-            {
-                cachedSet = new Dictionary<object, object>();
-                Cache.Add(typeof(T), cachedSet);
-            }
-
-            if (cachedSet.TryGetValue(key, out object cachedObject))
-            {
-                return (T)cachedObject;
-            }
-            
-            return default(T);
-        }
-
-        private void SetIntoCache<T>(object key, object value)
-            where T : IEntity
-        {
-            SetIntoCache(typeof(T), key, value);
-        }
-
-        private void SetIntoCache(Type type, object key, object value)
-        {
-            if (!type.GetInterfaces().Contains(typeof(IEntity)))
-                throw new ArgumentException("Only objects which implement " + nameof(IEntity) + " may be set into the cache.");
-
-            if (!Cache.TryGetValue(type, out var cachedSet))
-            {
-                cachedSet = new Dictionary<object, object>();
-                Cache.Add(type, cachedSet);
-            }
-
-            // Safety check to ensure all key types are the same for a given type.
-            if (cachedSet.Count > 0)
-            {
-                var first = cachedSet.Keys.First();
-                if (first.GetType() != key.GetType())
-                {
-                    throw new Exception("Cannot set key of type " + key.GetType() + " into cache because the established type is already defined as " + first.GetType());
-                }
-            }
-
-            if (cachedSet.ContainsKey(key))
-            {
-                cachedSet[key] = value;
-            }
-            else
-            {
-                cachedSet.Add(key, value);
-            }
-            
-        }
-
-        private void DeleteFromCache<T>(object key)
-            where T : IEntity
-        {
-            DeleteFromCache(typeof(T), key);
-        }
-
-        private void DeleteFromCache(Type type, object key)
-        {
-            if (!Cache.ContainsKey(type)) return;
-
-            var cachedSet = Cache[type];
-
-            if (cachedSet.ContainsKey(key))
-            {
-                cachedSet.Remove(key);
-            }
-
-        }
-
+        
         /// <summary>
         /// Returns a single entity of a given type from the database or cache.
         /// </summary>
@@ -446,14 +374,14 @@ namespace SWLOR.Game.Server.Service
         public T Get<T>(object id)
             where T : class, IEntity
         {
-            var cached = GetFromCache<T>(id);
+            var cached = _cache.Get<T>(id);
             if (cached != null)
                 return cached;
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 cached = connection.Get<T>(id);
-                SetIntoCache<T>(id, cached);
+                _cache.Set<T>(id, cached);
             }
 
             return cached;
@@ -462,13 +390,12 @@ namespace SWLOR.Game.Server.Service
         private void RegisterEmptyCacheSet<T>()
             where T: class, IEntity
         {
-            if (Cache.ContainsKey(typeof(T)))
+            if (_cache.IsRegistered<T>())
             {
                 throw new Exception("Cannot register an empty cacheset because it already exists! Did you call " + nameof(RegisterEmptyCacheSet) + " more than once? Type = " + typeof(T));
             }
 
-            var cachedSet = new Dictionary<object, object>();
-            Cache.Add(typeof(T), cachedSet);
+            _cache.RegisterEmptyCacheSet<T>();
         }
 
         /// <summary>
@@ -483,10 +410,9 @@ namespace SWLOR.Game.Server.Service
             where T : class, IEntity
         {
             // Cache already built. Return everything that's cached so far.
-            if (Cache.ContainsKey(typeof(T)))
+            if(_cache.IsRegistered<T>())
             {
-                var cacheSet = Cache[typeof(T)];
-                return cacheSet.Values.Cast<T>();
+                return _cache.GetAll<T>();
             }
 
             // Can't find anything in the cache so pull back the records from the database.
@@ -500,17 +426,11 @@ namespace SWLOR.Game.Server.Service
             foreach (var result in results)
             {
                 object id = GetEntityKey(result);
-                SetIntoCache<T>(id, result);
-            }
-            
-            // Send back the results if we know they exist in the cache.
-            if (Cache.TryGetValue(typeof(T), out var set))
-            {
-                return new HashSet<T>(set.Values.Cast<T>());
+                _cache.Set<T>(id, result);
             }
 
-            // If there's no data in the database for that table, return an empty list.
-            return new HashSet<T>();
+            // The cache provider will either return all objects of a given type OR an empty set of that type.
+            return _cache.GetAll<T>();
         }
 
         public T Single<T>()
