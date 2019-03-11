@@ -1,12 +1,13 @@
 
 using System;
 using System.Collections.Generic;
-
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[Perk]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Perk: IEntity
     {
         public Perk()

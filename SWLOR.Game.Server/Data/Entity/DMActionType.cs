@@ -1,6 +1,9 @@
-﻿namespace SWLOR.Game.Server.Data.Entity
+﻿using ProtoBuf;
+
+namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[DMActionType]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class DMActionType
     {
         [ExplicitKey]

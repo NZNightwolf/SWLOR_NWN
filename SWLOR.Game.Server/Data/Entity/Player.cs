@@ -3,10 +3,12 @@
 using SWLOR.Game.Server.Data.Contracts;
 using System;
 using System.Collections.Generic;
+using ProtoBuf;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[Player]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Player : IEntity
     {
         public Player()

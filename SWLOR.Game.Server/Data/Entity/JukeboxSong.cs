@@ -1,8 +1,10 @@
-﻿using SWLOR.Game.Server.Data.Contracts;
+﻿using ProtoBuf;
+using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[JukeboxSong]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class JukeboxSong: IEntity
     {
         [ExplicitKey]

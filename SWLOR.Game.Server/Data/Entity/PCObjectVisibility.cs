@@ -1,11 +1,13 @@
 
 
 using System;
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[PCObjectVisibility]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class PCObjectVisibility: IEntity
     {
         public PCObjectVisibility()

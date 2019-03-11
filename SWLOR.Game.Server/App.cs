@@ -16,6 +16,7 @@ using SWLOR.Game.Server.Item.Contracts;
 using SWLOR.Game.Server.Mod.Contracts;
 
 using NWN;
+using ProtoBuf.Meta;
 using SWLOR.Game.Server.AreaInstance.Contracts;
 using SWLOR.Game.Server.DoorRule.Contracts;
 using SWLOR.Game.Server.NWNX;

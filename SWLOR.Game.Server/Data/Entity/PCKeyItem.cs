@@ -1,11 +1,12 @@
 
 using System;
-
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[PCKeyItem]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class PCKeyItem: IEntity
     {
         public PCKeyItem()

@@ -1,8 +1,10 @@
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[ComponentType]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class ComponentType: IEntity
     {
         public ComponentType()

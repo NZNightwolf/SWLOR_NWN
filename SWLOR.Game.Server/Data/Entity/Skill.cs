@@ -1,12 +1,13 @@
 
 using System;
 using System.Collections.Generic;
-
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[Skill]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Skill: IEntity
     {
         public Skill()

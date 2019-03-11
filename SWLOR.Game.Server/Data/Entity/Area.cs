@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[Area]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Area: IEntity
     {
         public Area()

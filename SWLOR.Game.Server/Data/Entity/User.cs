@@ -1,11 +1,13 @@
 
 
 using System;
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[User]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class User: IEntity
     {
         [Key]

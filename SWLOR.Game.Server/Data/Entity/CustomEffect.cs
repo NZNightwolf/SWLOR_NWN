@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
-
+using ProtoBuf;
 using SWLOR.Game.Server.Data.Contracts;
 
 namespace SWLOR.Game.Server.Data.Entity
 {
     [Table("[CustomEffect]")]
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class CustomEffect: IEntity
     {
         [ExplicitKey]

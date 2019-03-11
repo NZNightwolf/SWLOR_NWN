@@ -50,6 +50,9 @@ namespace SWLOR.Game.Server.Service
                 Password = Environment.GetEnvironmentVariable("SQL_SERVER_PASSWORD")
             }.ToString();
 
+            // Initialize the cache provider.
+            _cache.Initialize();
+
             // Build the cache if specified.
             if (initializeCache)
                 InitializeCache();
