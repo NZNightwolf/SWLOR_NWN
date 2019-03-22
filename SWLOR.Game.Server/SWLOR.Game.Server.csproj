@@ -454,6 +454,15 @@
     <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Language\TranslatorMirialan.cs" />
     <Compile Include="Language\TranslatorMonCalamarian.cs" />
+    <Compile Include="Messaging\Contracts\IMessageHub.cs" />
+    <Compile Include="Messaging\MessageHub.cs" />
+    <Compile Include="Messaging\Messages\PerkUpgradedMessage.cs" />
+    <Compile Include="Messaging\Messages\PerkRefundedMessage.cs" />
+    <Compile Include="Messaging\Messages\QuestCompletedMessage.cs" />
+    <Compile Include="Messaging\Messages\SkillDecayedMessage.cs" />
+    <Compile Include="Messaging\Messages\SkillGainedMessage.cs" />
+    <Compile Include="Messaging\Subscription.cs" />
+    <Compile Include="Messaging\Subscriptions.cs" />
     <Compile Include="NWNX\ClericDomain.cs" />
     <Compile Include="Enumeration\CommandPermissionType.cs" />
     <Compile Include="Enumeration\ComponentBonusType.cs" />
@@ -2277,6 +2286,7 @@
     <EmbeddedResource Include="Data\Migrations\2019-02-27.3.sql" />
     <EmbeddedResource Include="Data\Migrations\2019-03-02.1.sql" />
     <EmbeddedResource Include="Data\Migrations\2019-03-03.1.sql" />
+    <EmbeddedResource Include="Data\Migrations\2019-03-11.1.sql" />
     <Content Include="ServerFiles\Star Wars LOR.mod" />
     <EmbeddedResource Include="Data\Migrations\Initialization.sql" />
     <EmbeddedResource Include="Data\Migrations\2018-11-07.1.sql" />
