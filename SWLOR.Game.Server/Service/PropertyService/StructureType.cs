@@ -83,7 +83,7 @@ namespace SWLOR.Game.Server.Service.PropertyService
             1)]
         TableDarkwood = 15,
         [Structure("Table, Coffee, Shelf",
-            "zep_table001",
+            "_mdrn_pl_table20",
             "",
             true,
             1)]
@@ -363,12 +363,12 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         Candle = 62,
-        [Structure("Chair, Dining (Arms)",
-            "nwsit_pl_lk_chpl",
+        [Structure("Chair, Curved Form",
+            "_mdrn_pl_chairdo",
             "",
             true,
             1)]
-        ChairDiningArms = 63,
+        ChairCurvedForm = 63,
         [Structure("Bear Skin Rug",
             "x0_bearskinrug1",
             "",
@@ -381,12 +381,12 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         Chandelier = 65,
-        [Structure("Chair, Mahogany Padded",
-            "nwsit_pl_chrgrwr",
+        [Structure("Chair, Wooden Striped",
+            "_mdrn_pl_chairws",
             "",
             true,
             1)]
-        ChairMahoganyPadded = 66,
+        ChairWoodenStriped = 66,
         [Structure("Urn",
             "plc_urn",
             "",
@@ -1656,7 +1656,7 @@ namespace SWLOR.Game.Server.Service.PropertyService
             1)]
         CounterLabSink = 276,
         [Structure("Chair, Brown Wingback",
-            "zep_ci_chr_003s",
+            "zep_ci_chr_003",
             "",
             true,
             1)]
@@ -1715,7 +1715,7 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         ConsoleCornerLarge = 286,
-        [Structure("Pile Of Cushions (Square)",
+        [Structure("Pile Of Cushions, Square",
             "nwplc_cushpilwh",
             "",
             true,

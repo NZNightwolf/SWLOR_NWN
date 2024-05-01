@@ -1,35 +1,35 @@
-Fabrication		Furniture Blueprints	Campfire	Lighting	1	Campire	1	1	structure_0011	1	Structure	1	ref_veldite	1	wood	1
-Fabrication		Furniture Blueprints	TableDarkwood	Surfaces	1	Table, Darkwood	5	1	structure_0015	1	Structure	1	wood	3	ref_veldite	2
-Fabrication		Furniture Blueprints	TableCoffeeShelf	Surfaces	1	Table, Coffee, Shelf	7	1	structure_0016	1	Structure	1	ref_veldite	4	wood	3
-Fabrication		Furniture Blueprints	UmbrellaBlue	MiscellaneousFurniture	1	Umbrella, Blue	8	1	structure_0049	1	Structure	1	wood	4	lth_ruined	4
-Fabrication		Furniture Blueprints	UmbrellaRed	MiscellaneousFurniture	1	Umbrella, Red	8	1	structure_0050	1	Structure	1	wood	4	lth_ruined	4
-Fabrication		Furniture Blueprints	LampBars	Lighting	1	Lamp, Bars	9	1	structure_0034	1	Structure	1	ref_veldite	5	wood	5
-Fabrication		Furniture Blueprints	BedLowBlue	Bed	2	Bed, Low (Blue)	12	1	structure_0109	1	Structure	1	fine_wood	2	lth_flawed	2
-Fabrication		Furniture Blueprints	BedLowRed	Bed	2	Bed, Low (Red)	12	1	structure_0110	1	Structure	1	fine_wood	2	lth_flawed	2
-Fabrication		Furniture Blueprints	MatSmallTatami	Flooring	2	Mat, Small Tatami	14	1	structure_0046	1	Structure	1	wood_fine	2	fiberp_flawed	3
-Fabrication		Furniture Blueprints	ChairWoodenPadded	Seating	2	Chair, Wooden Padded	15	1	structure_0053	1	Structure	1	fine_wood	3	ref_scordspar	3
-Fabrication		Furniture Blueprints	ChairDiningArms	Seating	2	Chair, Dining (Arms)	18	1	structure_0063	1	Structure	1	fine_wood	4	ref_scordspar	4
-Fabrication		Furniture Blueprints	ChairMahoganyPadded	Seating	2	Chair, Mahogany Padded	19	1	structure_0066	1	Structure	1	fine_wood	3	ref_scordspar	5
-Fabrication		Furniture Blueprints	FootlockerBlack	MiscellaneousFurniture	3	Footlocker, Black	22	1	structure_0071	1	Structure	2	ref_plagionite	3	ancient_wood	1
-Fabrication		Furniture Blueprints	TableSteelStained	Surfaces	3	Table, Steel, Stained	23	1	structure_0087	1	Structure	2	ref_plagionite	3	ancient_wood	3
-Fabrication		Furniture Blueprints	MonitorOverhead	Electronics	3	Monitor, Overhead	24	1	structure_0094	1	Structure	2	ref_plagionite	2	elec_good	4
-Fabrication		Furniture Blueprints	PillarPowerControl	Electronics	3	Pillar, Power Control	25	1	structure_0231	1	Structure	2	ref_plagionite	3	elec_good	3
-Fabrication		Furniture Blueprints	ChairDiningGothic	Seating	3	Chair, Dining, Gothic	27	1	structure_0105	1	Structure	2	ref_plagionite	4	ancient_wood	3
-Fabrication		Furniture Blueprints	CarpetMedallion	Flooring	3	Carpet, Medallion	28	1	structure_0232	1		2	lth_good	4	fiberp_good	4
-Fabrication		Furniture Blueprints	FountainStone4Spouts	MiscellaneousFurniture	3	Fountain, Stone, 4 Spouts	30	1	structure_0246	1	Structure	2	ref_plagionite	5	ancient_wood	5
-Fabrication		Furniture Blueprints	SpeakerStanding	Fixtures	4	Speaker, Standing	31	1	structure_0272	1	Structure	2	ref_keromber	1	elec_imperfect	1
-Fabrication		Furniture Blueprints	LockerOpenShelves	Fixtures	4	Locker, Open Shelves	32	1	structure_0273	1	Structure	2	ref_keromber	2	fiberp_imperfect	2
-Fabrication		Furniture Blueprints	CabinetLiquorMixed	Fixtures	4	Cabinet, Liquor (Mixed)	35	1	structure_0274	1	Structure	2	aracia_wood	3	lth_imperfect	3
-Fabrication		Furniture Blueprints	CounterLabStraight	Surfaces	4	Counter, Lab (Straight)	37	1	structure_0275	1	Structure	2	ref_keromber	3	aracia_wood	3
-Fabrication		Furniture Blueprints	CounterLabSink	Surfaces	4	Counter, Lab (Sink)	37	1	structure_0276	1	Structure	2	ref_keromber	4	aracia_wood	3
-Fabrication		Furniture Blueprints	ChairBrownWingback	Seating	4	Chair, Brown Wingback	39	1	structure_0277	1	Structure	2	aracia_wood	4	lth_imperfect	4
-Fabrication		Furniture Blueprints	PillarDishTower	Electronics	4	Pillar, Dish Tower	40	1	structure_0278	1	Structure	2	ref_keromber	4	elec_imperfect	5
-Fabrication		Furniture Blueprints	ConsoleTwScreenSpiral	Electronics	5	Console, Tall w/ Screen (Spiral)	45	1	structure_0279	1	Structure	2	ref_jasioclase	3	elec_high	3
-Fabrication		Furniture Blueprints	StorageTankCylinder	Fictures	5	Storage Tank, Cylinder	46	1	structure_0280	1	Structure	2	ref_jasioclase	3	elec_high	4
-Fabrication		Furniture Blueprints	WorkStationMonitors	Surfaces	5	WorkStationMonitors	46	1	structure_0281	1	Structure	2	ref_jasioclase	4	elec_high	3
-Fabrication		Furniture Blueprints	ChestLengthwise	Fixtures	5	Chest, Lengthwise	47	1	structure_0282	1	Structure	2	hyphae_wood	4	ref_jasioclase	3
-Fabrication		Furniture Blueprints	ConsoleCentralControl	Electronics	5	Console, Central Control	48	1	structure_0283	1	Structure	2	ref_jasioclase	5	elec_high	5
-Fabrication		Furniture Blueprints	ConsoleCircularCommand	Electronics	5	Console, Circular Command	49	1	structure_0284	1	Structure	2	ref_jasioclase	5	elec_high	5
-Fabrication		Furniture Blueprints	StorageCargoContainer	Fixtures	5	Storage, Cargo Container	50	1	structure_0285	1	Structure	2	ref_jasioclase	6	hyphae_wood	4
-Fabrication		Furniture Blueprints	ConsoleCornerLarge	Electronics	5	Console, Corner, Large	50	1	structure_0286	1	Structure	2	ref_jasioclase	6	elec_high	6
-Fabrication		Furniture Blueprints	PileOfCushionsSquare	MiscellaneousFurniture	2	Pile Of Cushions (Square)	12	1	structure_0281	1	Structure	1	fiberp_flawed	1	lth_flawed	2
+Fabrication		Furniture Blueprints	Campfire	Lighting	1	Campfire	1	1	structure_0011	Structure	1	ref_veldite	1	wood	1												
+Fabrication		Furniture Blueprints	TableDarkwood	Surfaces	1	Table, Darkwood	5	1	structure_0015	Structure	1	wood	3	ref_veldite	2												
+Fabrication		Furniture Blueprints	TableCoffeeShelf	Surfaces	1	Table, Coffee, Shelf	7	1	structure_0016	Structure	1	ref_veldite	4	wood	3												
+Fabrication		Furniture Blueprints	UmbrellaBlue	MiscellaneousFurniture	1	Umbrella, Blue	8	1	structure_0049	Structure	1	wood	4	lth_ruined	4												
+Fabrication		Furniture Blueprints	UmbrellaRed	MiscellaneousFurniture	1	Umbrella, Red	8	1	structure_0050	Structure	1	wood	4	lth_ruined	4												
+Fabrication		Furniture Blueprints	LampBars	Lighting	1	Lamp, Bars	9	1	structure_0034	Structure	1	ref_veldite	5	wood	5												
+Fabrication		Furniture Blueprints	BedLowBlue	Bed	2	Bed, Low (Blue)	12	1	structure_0109	Structure	1	fine_wood	2	lth_flawed	2												
+Fabrication		Furniture Blueprints	BedLowRed	Bed	2	Bed, Low (Red)	12	1	structure_0110	Structure	1	fine_wood	2	lth_flawed	2												
+Fabrication		Furniture Blueprints	PileOfCushionsSquare	MiscellaneousFurniture	2	Pile Of Cushions (Square)	12	1	structure_0281	Structure	1	fiberp_flawed	1	lth_flawed	2												
+Fabrication		Furniture Blueprints	MatSmallTatami	Flooring	2	Mat, Small Tatami	14	1	structure_0046	Structure	1	wood_fine	2	fiberp_flawed	3												
+Fabrication		Furniture Blueprints	ChairWoodenPadded	Seating	2	Chair, Wooden Padded	15	1	structure_0053	Structure	1	fine_wood	3	ref_scordspar	3												
+Fabrication		Furniture Blueprints	ChairDiningArms	Seating	2	Chair, Dining (Arms)	18	1	structure_0063	Structure	1	fine_wood	4	ref_scordspar	4												
+Fabrication		Furniture Blueprints	ChairMahoganyPadded	Seating	2	Chair, Mahogany Padded	19	1	structure_0066	Structure	1	fine_wood	3	ref_scordspar	5												
+Fabrication		Furniture Blueprints	FootlockerBlack	MiscellaneousFurniture	3	Footlocker, Black	22	1	structure_0071	Structure	2	ref_plagionite	3	ancient_wood	1												
+Fabrication		Furniture Blueprints	TableSteelStained	Surfaces	3	Table, Steel, Stained	23	1	structure_0087	Structure	2	ref_plagionite	3	ancient_wood	3												
+Fabrication		Furniture Blueprints	MonitorOverhead	Electronics	3	Monitor, Overhead	24	1	structure_0094	Structure	2	ref_plagionite	2	elec_good	4												
+Fabrication		Furniture Blueprints	PillarPowerControl	Electronics	3	Pillar, Power Control	25	1	structure_0231	Structure	2	ref_plagionite	3	elec_good	3												
+Fabrication		Furniture Blueprints	ChairDiningGothic	Seating	3	Chair, Dining, Gothic	27	1	structure_0105	Structure	2	ref_plagionite	4	ancient_wood	3												
+Fabrication		Furniture Blueprints	CarpetMedallion	Flooring	3	Carpet, Medallion	28	1	structure_0232		2	lth_good	4	fiberp_good	4												
+Fabrication		Furniture Blueprints	FountainStone4Spouts	MiscellaneousFurniture	3	Fountain, Stone, 4 Spouts	30	1	structure_0246	Structure	2	ref_plagionite	5	ancient_wood	5												
+Fabrication		Furniture Blueprints	SpeakerStanding	Fixtures	4	Speaker, Standing	31	1	structure_0272	Structure	2	ref_keromber	1	elec_imperfect	1												
+Fabrication		Furniture Blueprints	LockerOpenShelves	Fixtures	4	Locker, Open Shelves	32	1	structure_0273	Structure	2	ref_keromber	2	fiberp_imperfect	2												
+Fabrication		Furniture Blueprints	CabinetLiquorMixed	Fixtures	4	Cabinet, Liquor (Mixed)	35	1	structure_0274	Structure	2	aracia_wood	3	lth_imperfect	3												
+Fabrication		Furniture Blueprints	CounterLabStraight	Surfaces	4	Counter, Lab (Straight)	37	1	structure_0275	Structure	2	ref_keromber	3	aracia_wood	3												
+Fabrication		Furniture Blueprints	CounterLabSink	Surfaces	4	Counter, Lab (Sink)	37	1	structure_0276	Structure	2	ref_keromber	4	aracia_wood	3												
+Fabrication		Furniture Blueprints	ChairBrownWingback	Seating	4	Chair, Brown Wingback	39	1	structure_0277	Structure	2	aracia_wood	4	lth_imperfect	4												
+Fabrication		Furniture Blueprints	PillarDishTower	Electronics	4	Pillar, Dish Tower	40	1	structure_0278	Structure	2	ref_keromber	4	elec_imperfect	5												
+Fabrication		Furniture Blueprints	ConsoleTwScreenSpiral	Electronics	5	Console, Tall w/ Screen (Spiral)	45	1	structure_0279	Structure	2	ref_jasioclase	3	elec_high	3												
+Fabrication		Furniture Blueprints	StorageTankCylinder	Fictures	5	Storage Tank, Cylinder	46	1	structure_0280	Structure	2	ref_jasioclase	3	elec_high	4												
+Fabrication		Furniture Blueprints	WorkStationMonitors	Surfaces	5	WorkStationMonitors	46	1	structure_0281	Structure	2	ref_jasioclase	4	elec_high	3												
+Fabrication		Furniture Blueprints	ChestLengthwise	Fixtures	5	Chest, Lengthwise	47	1	structure_0282	Structure	2	hyphae_wood	4	ref_jasioclase	3												
+Fabrication		Furniture Blueprints	ConsoleCentralControl	Electronics	5	Console, Central Control	48	1	structure_0283	Structure	2	ref_jasioclase	5	elec_high	5												
+Fabrication		Furniture Blueprints	ConsoleCircularCommand	Electronics	5	Console, Circular Command	49	1	structure_0284	Structure	2	ref_jasioclase	5	elec_high	5												
+Fabrication		Furniture Blueprints	StorageCargoContainer	Fixtures	5	Storage, Cargo Container	50	1	structure_0285	Structure	2	ref_jasioclase	6	hyphae_wood	4												
+Fabrication		Furniture Blueprints	ConsoleCornerLarge	Electronics	5	Console, Corner, Large	50	1	structure_0286	Structure	2	ref_jasioclase	6	elec_high	6												
