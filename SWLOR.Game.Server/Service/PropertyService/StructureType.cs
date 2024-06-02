@@ -52,12 +52,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         MiningWell = 10,
-        [Structure("Campfire",
-            "plc_campfr",
-            "",
-            true,
-            1)]
-        Campfire = 11,
+
+        // 11 is free
+
         [Structure("Statue, Wizard",
             "x3_plc_gg001",
             "",
@@ -76,20 +73,11 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         StatueMonster = 14,
-        [Structure("Table, Darkwood",
-            "zep_table001",
-            "",
-            true,
-            1)]
-        TableDarkwood = 15,
-        [Structure("Table, Coffee, Shelf",
-            "zep_table001",
-            "",
-            true,
-            1)]
-        TTableCoffeeShelf = 16,
+
+        // 15-16 free
+
         [Structure("Brazier, Stone",
-            "_mdrn_pl_table20",
+            "plc_brazier",
             "",
             true,
             1)]
@@ -190,12 +178,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         PillarStone = 33,
-        [Structure("Lamp, Bars",
-            "_mdrn_pl_lghtpl4",
-            "",
-            true,
-            1)]
-        LampBars = 34,
+
+        // 34 is free
+
         [Structure("Statue of Lathander",
             "x2_plc_statue_la",
             "",
@@ -262,12 +247,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         Easel = 45,
-        [Structure("Mat, Small Tatami",
-            "zep_tatami001",
-            "",
-            true,
-            1)]
-        MatSmallTatami = 46,
+
+        // 46 is free
+
         [Structure("Keg",
             "plc_keg",
             "",
@@ -280,18 +262,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         DranStatue = 48,
-        [Structure("Umbrella, Blue",
-            "_mdrn_pl_umbllab",
-            "",
-            true,
-            1)]
-        UmbrellaBlue = 49,
-        [Structure("Umbrella, Red",
-            "_mdrn_pl_umbllar",
-            "",
-            true,
-            1)]
-        UmbrellaRed = 50,
+
+        // 49-50 free
+
         [Structure("Net",
             "nw_plc_net",
             "",
@@ -304,12 +277,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         BedExtraLarge = 52,
-        [Structure("Chair, Wooden Padded",
-            "zep_chking_004",
-            "",
-            true,
-            1)]
-        ChairWoodenPadded = 53,
+
+        // 53 is free
+
         [Structure("Carpet, Round, Blue",
             "x0_roundrugorien",
             "",
@@ -363,12 +333,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         Candle = 62,
-        [Structure("Chair, Dining (Arms)",
-            "nwsit_pl_lk_chpl",
-            "",
-            true,
-            1)]
-        ChairDiningArms = 63,
+
+        // 63 is free
+
         [Structure("Bear Skin Rug",
             "x0_bearskinrug1",
             "",
@@ -381,12 +348,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         Chandelier = 65,
-        [Structure("Chair, Mahogany Padded",
-            "nwsit_pl_chrgrwr",
-            "",
-            true,
-            1)]
-        ChairMahoganyPadded = 66,
+
+        // 66 is free
+
         [Structure("Urn",
             "plc_urn",
             "",
@@ -411,12 +375,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         TableWood = 70,
-        [Structure("Footlocker, Black",
-            "_mdrn_pl_canten1",
-            "",
-            true,
-            1)]
-        FootlockerBlack = 71,
+
+        // 71 is free
+
         [Structure("Throw Rug",
             "plc_throwrug",
             "",
@@ -507,12 +468,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         Ottoman = 86,
-        [Structure("Table, Steel, Stained",
-            "swd_table04",
-            "",
-            true,
-            1)]
-        TableSteelStained = 87,
+
+        // 87 is free
+
         [Structure("Pillar, Rounded",
             "x0_ruinedpillar",
             "",
@@ -549,12 +507,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         CarpetFancy = 93,
-        [Structure("Monitor, Overhead",
-            "_mdrn_pl_monitr5",
-            "",
-            true,
-            1)]
-        MonitorOverhead = 94,
+
+        // 94 is free
+
         [Structure("Illithid Table",
             "x2_plc_tablemind",
             "",
@@ -615,12 +570,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         RunePillar = 104,
-        [Structure("Chair, Dining, Gothic",
-            "zep_ci_chr_001",
-            "",
-            true,
-            1)]
-        ChairDiningGothic = 105,
+
+        // 105 is free
+
         [Structure("Mirror",
             "x2_plc_mirror",
             "",
@@ -639,18 +591,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         DrowTable = 108,
-        [Structure("Bed, Low (Blue)",
-            "zep_lowbed002",
-            "",
-            true,
-            1)]
-        BedLowBlue = 109,
-        [Structure("Bed, Low (Red)",
-            "zep_lowbed004",
-            "",
-            true,
-            1)]
-        BedLowRed = 110,
+
+        // 109-110 free
+
         [Structure("Bench, Stone, Dwarven",
             "bench_stonedwarf",
             "",
@@ -1371,18 +1314,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         CouchLeatherBlue = 230,
-        [Structure("Pillar, Power Control",
-            "_mdrn_pl_powerps",
-            "",
-            true,
-            1)]
-        PillarPowerControl = 231,
-        [Structure("Carpet, Medallion",
-            "zep_throwrug013",
-            "",
-            true,
-            1)]
-        CarpetMedallion = 232,
+
+        // 231-232 are open
+
         [Structure("Table, Plastic (Large)",
             "_mdrn_pl_tabplal",
             "",
@@ -1461,12 +1395,9 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             1)]
         TelevisionBigScreen = 245,
-        [Structure("Fountain, Stone, 4 Spouts",
-            "zep_fountain004",
-            "",
-            true,
-            1)]
-        FountainStone4Spouts = 246,
+
+        // 246 is open
+
         [Structure("Foyer Chandelier",
             "zep_ci_lgt_003",
             "",
@@ -1624,103 +1555,6 @@ namespace SWLOR.Game.Server.Service.PropertyService
             true,
             StructureCategoryType.ResearchDevice)]
         Incubator = 271,
-
-        [Structure("Speaker, Standing",
-            "swlor_0011",
-            "",
-            true,
-            1)]
-        SpeakerStanding = 272,
-        [Structure("Locker, Open Shelves",
-            "_mdrn_pl_lockerm",
-            "",
-            true,
-            1)]
-        LockerOpenShelves = 273,
-        [Structure("Cabinet, Liquor (Mixed)",
-            "nwed_mixbarshlf",
-            "",
-            true,
-            1)]
-        CabinetLiquorMixed = 274,
-        [Structure("Counter, Lab (Straight)",
-            "_mdrn_pl_cntlabs",
-            "",
-            true,
-            1)]
-        CounterLabStraight = 275,
-        [Structure("Counter, Lab (Sink)",
-            "_mdrn_pl_cntlbws",
-            "",
-            true,
-            1)]
-        CounterLabSink = 276,
-        [Structure("Chair, Brown Wingback",
-            "zep_ci_chr_003s",
-            "",
-            true,
-            1)]
-        ChairBrownWingback = 277,
-        [Structure("Pillar, Dish Tower",
-            "_mdrn_pl_comtwr1",
-            "",
-            true,
-            1)]
-        PillarDishTower = 278,
-        [Structure("Console, Tall w/ Screen (Blue Spiral)",
-            "_mdrn_pl_conso16",
-            "",
-            true,
-            1)]
-        ConsoleTwScreenSpiral = 279,
-        [Structure("Storage Tank, Cylinder",
-            "_mdrn_pl_tanker",
-            "",
-            true,
-            1)]
-        StorageTankCylinder = 280,
-        [Structure("Work Station, Monitors",
-            "_mdrn_pl_df_wseg",
-            "",
-            true,
-            1)]
-        WorkStationMonitors = 281,
-        [Structure("Chest, Lengthwise",
-            "_mdrn_pl_conta27",
-            "",
-            true,
-            1)]
-        ChestLengthwise = 282,
-        [Structure("Console, Central Control",
-            "swlor_0054",
-            "",
-            true,
-            1)]
-        ConsoleCentralControl = 283,
-        [Structure("Console, Circular Command",
-            "swlor_0049",
-            "",
-            true,
-            1)]
-        ConsoleCircularCommand = 284,
-        [Structure("Storage, Cargo Container",
-            "_mdrn_pl_conta39",
-            "",
-            true,
-            1)]
-        StorageCargoContainer = 285,
-        [Structure("Console, Corner, Large",
-            "swlor_0106",
-            "",
-            true,
-            1)]
-        ConsoleCornerLarge = 286,
-        [Structure("Pile Of Cushions (Square)",
-            "nwplc_cushpilwh",
-            "",
-            true,
-            1)]
-        PileOfCushionsSquare = 287,
 
         // Buildings start here (5000+)
         [Structure("City Hall - Style 1",
