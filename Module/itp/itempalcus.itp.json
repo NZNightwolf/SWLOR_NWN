@@ -10882,17 +10882,6 @@
               "__struct_id": 0,
               "NAME": {
                 "type": "cexostring",
-                "value": "Chair, Curved Form"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "structure_0063"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "NAME": {
-                "type": "cexostring",
                 "value": "Chair, Dining - Grey"
               },
               "RESREF": {
@@ -10915,6 +10904,17 @@
               "__struct_id": 0,
               "NAME": {
                 "type": "cexostring",
+                "value": "Chair, Dining (Arms)"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "structure_0063"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
                 "value": "Chair, Dining, Gothic"
               },
               "RESREF": {
@@ -10931,6 +10931,17 @@
               "RESREF": {
                 "type": "resref",
                 "value": "structure_0237"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Chair, Mahogany Padded"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "structure_0066"
               }
             },
             {
@@ -11052,17 +11063,6 @@
               "RESREF": {
                 "type": "resref",
                 "value": "structure_0053"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "NAME": {
-                "type": "cexostring",
-                "value": "Chair, Wooden Striped"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "structure_0066"
               }
             },
             {
@@ -12482,17 +12482,6 @@
               "RESREF": {
                 "type": "resref",
                 "value": "structure_0225"
-              }
-            },
-            {
-              "__struct_id": 0,
-              "NAME": {
-                "type": "cexostring",
-                "value": "Pile of Cushions, Square"
-              },
-              "RESREF": {
-                "type": "resref",
-                "value": "structure_0287"
               }
             },
             {

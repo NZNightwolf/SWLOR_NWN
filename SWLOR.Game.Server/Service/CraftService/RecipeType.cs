@@ -709,8 +709,8 @@
         BedLowRed = 1263,
         MatSmallTatami = 1264,
         ChairWoodenPadded = 1265,
-        ChairCurvedForm = 1266,
-        ChairWoodenStriped = 1267,
+        ChairDiningArms = 1266,
+        ChairMahoganyPadded = 1267,
         FootlockerBlack = 1268,
         TableSteelStained = 1269,
         MonitorOverhead = 1270,
@@ -733,7 +733,6 @@
         StorageCargoContainer = 1287,
         ConsoleCornerLarge = 1288,
         PileOfCushionsSquare = 1289,
-        PillarDishTower = 1290,
 
         ReinforcedConstructionParts = 1496,
         ReinforcedPowerSupplyUnit = 1497,

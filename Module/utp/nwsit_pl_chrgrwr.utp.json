@@ -6,7 +6,7 @@
   },
   "Appearance": {
     "type": "dword",
-    "value": 1556
+    "value": 7177
   },
   "AutoRemoveKey": {
     "type": "byte",
@@ -22,7 +22,7 @@
   },
   "Comment": {
     "type": "cexostring",
-    "value": "Source: Liquor Cabinet by DigitalKnightmare"
+    "value": ""
   },
   "Conversation": {
     "type": "resref",
@@ -30,24 +30,23 @@
   },
   "CurrentHP": {
     "type": "short",
-    "value": 15
+    "value": 10
   },
   "Description": {
-    "id": 16813600,
     "type": "cexolocstring",
     "value": {}
   },
   "DisarmDC": {
     "type": "byte",
-    "value": 15
+    "value": 0
   },
   "Faction": {
     "type": "dword",
-    "value": 1
+    "value": 3
   },
   "Fort": {
     "type": "byte",
-    "value": 16
+    "value": 5
   },
   "Hardness": {
     "type": "byte",
@@ -59,11 +58,11 @@
   },
   "HP": {
     "type": "short",
-    "value": 15
+    "value": 10
   },
   "Interruptable": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "KeyName": {
     "type": "cexostring",
@@ -75,16 +74,17 @@
   },
   "Lockable": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "Locked": {
     "type": "byte",
     "value": 0
   },
   "LocName": {
-    "id": 16812336,
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": "Chair, Wood Side (Mahogany/Grey)"
+    }
   },
   "OnClick": {
     "type": "resref",
@@ -140,7 +140,7 @@
   },
   "OnUsed": {
     "type": "resref",
-    "value": ""
+    "value": "x2_plc_used_sit"
   },
   "OnUserDefined": {
     "type": "resref",
@@ -148,7 +148,7 @@
   },
   "OpenLockDC": {
     "type": "byte",
-    "value": 18
+    "value": 0
   },
   "PaletteID": {
     "type": "byte",
@@ -160,7 +160,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 2601
+    "value": 0
   },
   "Ref": {
     "type": "byte",
@@ -168,15 +168,15 @@
   },
   "Static": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "Tag": {
     "type": "cexostring",
-    "value": "nwed_mixbarshlf"
+    "value": "nwsit_pl_chrgrwr"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "nwed_mixbarshlf"
+    "value": "nwsit_pl_chrgrwr"
   },
   "TrapDetectable": {
     "type": "byte",
@@ -208,7 +208,7 @@
   },
   "Useable": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "Will": {
     "type": "byte",
